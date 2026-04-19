@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Hind+Siliguri:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #1e528e;
+}
+
+/* Hero Section */
+.hero {
+  height: 450px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.hero-content p {
+  font-family: "Hind Siliguri", sans-serif;
+  margin-top: 15px;
+  font-size: 22px;
+  opacity: 0.9;
+}
+
+/* Main Layout Wrapper */
+.main-wrapper {
+  max-width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+/* Sidebar */
+.sidebar-upazila {
+  flex: 0 0 260px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  height: fit-content;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 90px;
+}
+
+.sidebar-upazila h3 {
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #1e528e;
+  border-bottom: 2px solid #f0f2f5;
+  padding-bottom: 10px;
+}
+
+.sidebar-upazila ul {
+  list-style: none;
+}
+
+.sidebar-upazila ul li {
+  margin-bottom: 8px;
+}
+
+.sidebar-upazila ul li a {
+  text-decoration: none;
+  color: #555;
+  font-family: "Hind Siliguri", sans-serif;
+  display: block;
+  padding: 12px 15px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.sidebar-upazila ul li a:hover {
+  background: #f0f4f8;
+  color: #1e528e;
+  transform: translateX(5px);
+}
+
+.sidebar-upazila ul li.active-li a {
+  background: #1e528e;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(30, 82, 142, 0.3);
+}
+
+/* Right Content Area */
+.content-area {
+  flex: 1;
+}
+
+.section-title {
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #2c3e50;
+  border-left: 5px solid #1e528e;
+  padding-left: 15px;
+}
+
+/* Gallery & Person Grid */
+.gallery-grid,
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Places Cards */
+.image-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #eee;
+}
+
+.image-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.image-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Famous Personalities Cards */
+.person-grid {
+  margin-top: 20px;
+}
+
+.person-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border-bottom: 4px solid #1e528e;
+}
+
+.person-img {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #f0f4f8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.person-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.person-card h4 {
+  font-family: "Hind Siliguri", sans-serif;
+  color: #1e528e;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.person-card p {
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 14px;
+  color: #777;
+}
+
+.person-card:hover {
+  transform: translateY(-8px);
+  background: #fbfcfe;
+}
+
+/* Card Info Shared */
+.card-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-info h4 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Description Section */
+.description {
+  margin-top: 40px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.description h3 {
+  margin-bottom: 15px;
+  color: #1e528e;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+.description p {
+  font-family: "Hind Siliguri", sans-serif;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 50px 20px;
+  font-size: 14px;
+  color: #999;
+  background: #fff;
+  margin-top: 60px;
+  border-top: 1px solid #eee;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .main-wrapper {
+    flex-direction: column;
+  }
+  .sidebar-upazila {
+    flex: none;
+    width: 100%;
+    position: static;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+}

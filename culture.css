@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Hind+Siliguri:wght@400;600&display=swap");
+
+:root {
+  --primary: #1e528e;
+  --accent: #2ecc71;
+  --dark: #2d3436;
+  --light: #f0f4f8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Hind Siliguri", "Poppins", sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* Hero Section with Glassmorphism */
+.culture-hero {
+  height: 70vh;
+  background: url("https://images.unsplash.com/photo-1590050752117-23a9d7fc21ad?auto=format&fit=crop&w=1200")
+    center/cover fixed;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.7)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  text-align: center;
+  color: white;
+  animation: zoomIn 1.5s ease-out;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Modern Cards */
+.container {
+  max-width: 1100px;
+  margin: -100px auto 100px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.culture-card {
+  display: flex;
+  background: white;
+  border-radius: 30px;
+  margin-bottom: 60px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.culture-card:hover {
+  transform: translateY(-15px) scale(1.02);
+}
+
+.culture-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.content-side {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title-bg {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.title-bg::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.tags {
+  margin-top: 25px;
+  display: flex;
+  gap: 10px;
+}
+
+.tags span {
+  background: var(--light);
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.visual-side {
+  flex: 1;
+  min-height: 400px;
+}
+
+/* Background Images for Cards */
+.lalon-img {
+  background: url("https://images.unsplash.com/photo-1544924222-b529806232ff?auto=format&fit=crop&w=600")
+    center/cover;
+}
+.festival-img {
+  background: url("https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=600")
+    center/cover;
+}
+.craft-img {
+  background: url("https://images.unsplash.com/photo-1506806732259-39c2d4a78473?auto=format&fit=crop&w=600")
+    center/cover;
+}
+
+/* Footer */
+footer {
+  background: #fff;
+  text-align: center;
+  padding: 60px;
+  border-top: 1px solid #eee;
+}
+
+/* Animations */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .culture-card,
+  .culture-card.reverse {
+    flex-direction: column;
+  }
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  .container {
+    margin-top: 30px;
+  }
+}
